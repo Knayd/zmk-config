@@ -36,7 +36,6 @@
                 &kp DEL     &kp Z   &kp X   &kp C   &kp V   &kp B                                       &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
                                             &mo _NUM    &lt _NAV TAB    &lt _WIN RET          &kp LSHIFT  &lt _SYM SPACE    &key_repeat
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
