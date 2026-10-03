@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/oskey.h>
+#include <behaviors/oskey.dtsi>
 
 // Layers
 #define _BASE 0
@@ -57,6 +59,13 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB>;
             hold-trigger-on-release;
+        };
+
+        // OS aware keys
+        ok_test: ok_test {
+            compatible = "zmk,behavior-os-key";
+            #binding-cells = <0>;
+            binding=<&kp W>, <&kp M>, <&kp L>;
         };
     };
 
@@ -134,7 +143,7 @@
         config_layer {
             display-name = "CONFIG";
             bindings = <
-                &bootloader _______ _______ _______ _______ _______ _______      _______ _______        _______         _______         _______         _______ &bootloader
+                &bootloader _______ _______ _______ _______ _______ _______      &ok_test _______        _______         _______         _______         _______ &bootloader
                 _______     _______ _______ _______ _______ _______ _______      _______ &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    _______ _______
                 _______     _______ _______ _______ _______ _______                      _______        &to _BASE       &to _SWAP_FLAG  _______         _______ &to _GAME
                                             _______ _______ _______                      _______        _______         _______
