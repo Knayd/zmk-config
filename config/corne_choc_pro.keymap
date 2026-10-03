@@ -38,7 +38,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMBS>;
+            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB>;
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
@@ -49,7 +49,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMBS>;
+            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB>;
             hold-trigger-on-release;
         };
     };
