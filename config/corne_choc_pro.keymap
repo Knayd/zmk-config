@@ -64,7 +64,7 @@
         swap_layer {
             if-layers = <_SWAP_FLAG>;
             then-layer = <_MAC_BASE>;
-        }    
+        };
     };
 
     keymap {
