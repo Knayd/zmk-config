@@ -62,6 +62,7 @@
         };
 
         // OS aware keys
+        // bindings = Win , Mac , Lin
         ok_test: ok_test {
             compatible = "zmk,behavior-os-key";
             #binding-cells = <0>;
@@ -143,10 +144,10 @@
         config_layer {
             display-name = "CONFIG";
             bindings = <
-                &bootloader _______ _______ _______ _______ _______ _______      &ok_test _______        _______         _______         _______         _______ &bootloader
-                _______     _______ _______ _______ _______ _______ _______      &os_sel &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    _______ _______
-                _______     _______ _______ _______ _______ _______                      _______        &to _BASE       &to _SWAP_FLAG  _______         _______ &to _GAME
-                                            _______ _______ _______                      _______        _______         _______
+                &bootloader _______ _______ _______ _______ _______ _______      &ok_test   _______     &os_sel OS_WIN  &os_sel OS_MAC  &os_sel OS_LIN  _______         &bootloader
+                _______     _______ _______ _______ _______ _______ _______      _______    _______     &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    _______
+                _______     _______ _______ _______ _______ _______                         _______     &to _BASE       &to _SWAP_FLAG  _______         _______         &to _GAME
+                                            _______ _______ _______                         _______        _______         _______
             >;
         };
 
