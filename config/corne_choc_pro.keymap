@@ -61,8 +61,10 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        if-layers = <_SWAP_FLAG>;
-        then-layer = <_MAC_BASE>;
+        swap_layer {
+            if-layers = <_SWAP_FLAG>;
+            then-layer = <_MAC_BASE>;
+        }    
     };
 
     keymap {
