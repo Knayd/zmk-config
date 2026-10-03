@@ -17,8 +17,9 @@
 #define _NAV 3
 #define _WIN 4
 #define _NUM 5
-#define _GAME 6
-#define _SWAP_FLAG 7 
+#define _CONFIG 6
+#define _GAME 7
+#define _SWAP_FLAG 8
 
 // keys
 #define _______ &trans
@@ -76,7 +77,7 @@
                 &kp ESC     &kp Q         &kp W         &kp E           &kp R           &kp T       &mkp MB2           &kp C_VOL_UP     &kp Y       &kp U           &kp I           &kp O           &kp P           &kp PSCRN
                 &kp BSPC    &hml LGUI A   &hml LALT S   &hml LSHFT D    &hml LCTRL F    &kp G       &mkp MB1           &kp C_VOL_DN     &kp H       &hmr LCTRL J    &hmr LSHFT K    &hmr LALT L     &hmr LGUI SQT   &kp SEMI
                 &kp DEL     &kp Z         &kp X         &kp C           &kp V           &kp B                                           &kp N       &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp CAPS
-                                                        &mo _NUM        &lt _NAV TAB    &lt _WIN RET                                    &kp LSHIFT  &lt _SYM SPACE  &key_repeat
+                                                        &mo _NUM        &lt _NAV TAB    &lt _WIN RET                                    &kp LSHIFT  &lt _SYM SPACE  &mo _CONFIG
             >;
         };
 
@@ -110,7 +111,7 @@
             >;
         };
 
-        win_layer_1 {
+        win_layer {
             display-name = "WINMAN";
             bindings = <
                 _______ _______ _______ _______ _______ _______ _______      _______ _______ _______ _______ _______ _______ _______
@@ -120,17 +121,27 @@
             >;
         };
 
-        num_layer_2 {
+        num_layer {
             display-name = "NUMBERS";
             bindings = <
-                _______     _______ _______ _______ _______ _______ _______      _______ &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp PLUS  &to _SWAP_FLAG
+                _______     _______ _______ _______ _______ _______ _______      _______ &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp PLUS  _______
                 _______     _______ _______ _______ _______ _______ _______      _______ &kp SLASH  &kp N4  &kp N5  &kp N6  &kp MINUS _______
                 &bootloader _______ _______ _______ _______ _______                      _______    &kp N1  &kp N2  &kp N3  &kp DOT   &kp EQUAL
                                             _______ _______ _______                      &kp N0     _______ _______
             >;
         };
 
-        game_layer_3 {
+        config_layer {
+            display-name = "CONFIG";
+            bindings = <
+                &bootloader _______ _______ _______ _______ _______ _______      _______ _______        _______         _______         _______         _______ &bootloader
+                _______     _______ _______ _______ _______ _______ _______      _______ &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    _______ _______
+                _______     _______ _______ _______ _______ _______                      _______        &to _BASE       &to _SWAP_FLAG  _______         _______ _______
+                                            _______ _______ _______                      _______        _______         _______
+            >;
+        };
+
+        game_layer {
             display-name = "GAMING";
             bindings = <
                 _______ _______ _______ _______ _______ _______ _______      _______ _______ _______ _______ _______ _______ _______
