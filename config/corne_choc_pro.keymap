@@ -73,6 +73,9 @@
 
         OS_KEY(os_print, &kp W, &kp M, &kp L)
         OS_KEY(delete_word, &kp LC(BACKSPACE), &kp LA(BACKSPACE), &kp LC(BACKSPACE))
+        OS_KEY(next_tab, &kp LC(PG_DN), &kp LG(LS(RBRC)), &kp LC(PG_DN))
+        OS_KEY(prev_tab, &kp LC(PG_UP), &kp LG(LS(LBRC)), &kp LC(PG_UP))
+        OS_KEY(show_apps, &kp LG(TAB), &kp LC(UP), &kp LG(W))
     };
 
     conditional_layers {
@@ -119,10 +122,10 @@
         nav_layer {
             display-name = "NAVIGATON";
             bindings = <
-                _______ &kp LC(W)   _______ _______ _______ _______ _______      _______ _______ &kp HOME   &kp UP      &kp END     _______ _______
-                _______ _______     _______ _______ _______ _______ _______      _______ _______ &kp LEFT   &kp DOWN    &kp RIGHT   _______ _______
-                _______ _______     _______ _______ _______ _______                      _______ _______    _______     _______     _______ _______
-                                            _______ _______ _______                      _______ _______ _______
+                _______         &kp LC(W)   _______ &ok_prev_tab &ok_next_tab    _______ _______      _______ _______ &kp HOME   &kp UP      &kp END     _______ _______
+                &delete_word    _______     _______ _______ _______         _______ _______      _______ _______ &kp LEFT   &kp DOWN    &kp RIGHT   _______ _______
+                _______         _______     _______ _______ _______         _______                      _______ _______    _______     _______     _______ _______
+                                                    _______ _______         _______                      _______ _______ _______
             >;
         };
 
