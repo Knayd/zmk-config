@@ -52,6 +52,20 @@
         bindings = <binding>;          \
     };
 
+#define HOME_ROW_MOD(name, trigger_positions)        \
+    name: name {                                      \
+        compatible = "zmk,behavior-hold-tap";         \
+        #binding-cells = <2>;                         \
+        flavor = "balanced";                          \
+        require-prior-idle-ms = <150>;                \
+        tapping-term-ms = <280>;                      \
+        quick-tap-ms = <175>;                         \
+        bindings = <&kp>, <&kp>;                      \
+        hold-trigger-key-positions = <trigger_positions>; \
+        hold-trigger-on-release;                      \
+        hold-while-undecided;                         \
+    };
+
 / {
     chosen {
         zmk,physical-layout = &default_layout;
@@ -95,28 +109,9 @@
 
 / {
     behaviors {
-        hml: home_row_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB>;
-            hold-trigger-on-release;
-        };
-        hmr: home_row_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB>;
-            hold-trigger-on-release;
-        };
+        // Home row mods
+        HOME_ROW_MOD(hml, KEYS_RIGHT KEYS_THUMB)
+        HOME_ROW_MOD(hmr, KEYS_LEFT KEYS_THUMB)
 
         // OS aware keys
         // bindings = Win , Mac , Lin
