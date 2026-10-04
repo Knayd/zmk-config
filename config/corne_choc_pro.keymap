@@ -81,7 +81,7 @@
             if-layers = <_SWAP_FLAG>;
             then-layer = <_MAC_BASE>;
         };
-    };hy
+    };
 
     keymap {
         compatible = "zmk,keymap";
