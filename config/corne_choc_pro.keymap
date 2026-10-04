@@ -70,7 +70,7 @@
 
         // OS aware keys
         // bindings = Win , Mac , Lin
-
+        
         OS_KEY(os_print, &kp W, &kp M, &kp L)
         OS_KEY(os_toggle, &os_sel OS_MAC, &os_sel OS_LIN, &os_sel OS_WIN)
         OS_KEY(delete_word, &kp LC(BACKSPACE), &kp LA(BACKSPACE), &kp LC(BACKSPACE))
@@ -83,7 +83,6 @@
         OS_KEY(win_down, &kp LG(DOWN), &kp LC(LA(DOWN)), &kp LG(DOWN))
         OS_KEY(win_full, &kp LG(UP), &kp LC(LA(RET)), &kp LG(PG_UP))
         OS_KEY(mon_left, &kp LG(LS(LEFT)), &kp LG(LA(LC(LEFT))), &kp LG(LS(LEFT)))
-        OS_KEY(mon_right, &kp LG(LS(RIGHT)), &kp LG(LA(LC(RIGHT))), &kp LG(LS(RIGHT)))
         OS_KEY(mon_right, &kp LG(LS(RIGHT)), &kp LG(LA(LC(RIGHT))), &kp LG(LS(RIGHT)))
         OS_KEY(show_desk, &kp LG(D), &kp F11, &kp LG(D))
         OS_KEY(scrn_shot, &kp PSCRN, &kp LG(LS(N4)), &kp PSCRN)
@@ -134,10 +133,10 @@
         nav_layer {
             display-name = "NAVIGATON";
             bindings = <
-                _______         &kp LC(W)   _______ &ok_prev_tab &ok_next_tab    _______ _______      _______ _______ &kp HOME   &kp UP      &kp END     _______ _______
-                &delete_word    _______     _______ _______ _______         _______ _______      _______ _______ &kp LEFT   &kp DOWN    &kp RIGHT   _______ _______
-                _______         _______     _______ _______ _______         _______                      _______ _______    _______     _______     _______ _______
-                                                    _______ _______         _______                      _______ _______ _______
+                _______         &kp LC(W)   _______ &prev_tab   &next_tab   _______ _______      _______ _______ &kp HOME   &kp UP      &kp END     _______ _______
+                &delete_word    _______     _______ _______     _______     _______ _______      _______ _______ &kp LEFT   &kp DOWN    &kp RIGHT   _______ _______
+                _______         _______     _______ _______     _______     _______                      _______ _______    _______     _______     _______ _______
+                                                    _______     _______     _______                      _______ _______ _______
             >;
         };
 
