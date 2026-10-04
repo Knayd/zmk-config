@@ -22,11 +22,12 @@
 #define _MAC_BASE 1
 #define _SYM 2
 #define _NAV 3
-#define _WIN 4
-#define _NUM 5
-#define _CONFIG 6
-#define _GAME 7
-#define _SWAP_FLAG 8
+#define _MAC_NAV 4
+#define _WIN 5
+#define _NUM 6
+#define _CONFIG 7
+#define _GAME 8
+#define _SWAP_FLAG 9
 
 #define _______ &trans
 
@@ -141,9 +142,13 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        swap_layer {
+        swap_base_layer {
             if-layers = <_SWAP_FLAG>;
             then-layer = <_MAC_BASE>;
+        };
+        swap_nav_layer {
+            if-layers = <_SWAP_FLAG _NAV>;
+            then-layer = <_MAC_NAV>;
         };
     };
 
@@ -187,6 +192,16 @@
                 &delete_word    &kp LGUI    &kp LALT    &kp LSHIFT  &kp LCTRL   _______ _______         _______ _______ &kp LEFT        &kp DOWN    &kp RIGHT   _______ _______
                 &ok_redo        &ok_undo    &ok_cut     &ok_copy    &ok_paste                                   _______ &kp LA(LC(L))   _______     _______     _______ _______
                                             _______     _______     _______                                     _______ _______         _______
+            >;
+        };
+
+        mac_nav_layer {
+            display-name = "MAC NAV";
+            bindings = <
+                _______ _______      _______ _______ _______     _______ _______      _______ _______ _______ _______ _______ _______ _______
+                _______ &kp LCTRL    _______ _______ &kp LGUI    _______ _______      _______ _______ _______ _______ _______ _______ _______
+                _______ _______      _______ _______ _______     _______                      _______ _______ _______ _______ _______ _______
+                                             _______ _______     _______                      _______ _______ _______
             >;
         };
 
