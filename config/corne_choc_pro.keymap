@@ -89,7 +89,7 @@
         COMBO(combo_f11, 41 44, &kp F11)
         COMBO(combo_f12, 42 43, &kp F12)
         COMBO(combo_mb3, 6 20, &mkp MB3)
-        COMBO(combo_pp, 7 21, &mkp C_PP)
+        COMBO(combo_pp, 7 21, &kp C_PP)
     };
 };
 
