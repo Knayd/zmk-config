@@ -72,10 +72,22 @@
         // bindings = Win , Mac , Lin
 
         OS_KEY(os_print, &kp W, &kp M, &kp L)
+        OS_KEY(os_toggle, &os_sel OS_MAC, &os_sel OS_LIN, &os_sel OS_WIN)
         OS_KEY(delete_word, &kp LC(BACKSPACE), &kp LA(BACKSPACE), &kp LC(BACKSPACE))
         OS_KEY(next_tab, &kp LC(PG_DN), &kp LG(LS(RBRC)), &kp LC(PG_DN))
         OS_KEY(prev_tab, &kp LC(PG_UP), &kp LG(LS(LBRC)), &kp LC(PG_UP))
         OS_KEY(show_apps, &kp LG(TAB), &kp LC(UP), &kp LG(W))
+        OS_KEY(win_left, &kp LG(LEFT), &kp LC(LA(LEFT)), &kp LG(LEFT))
+        OS_KEY(win_right, &kp LG(RIGHT), &kp LC(LA(RIGHT)), &kp LG(RIGHT))
+        OS_KEY(win_up, &kp LG(UP), &kp LC(LA(UP)), &kp LG(UP))
+        OS_KEY(win_down, &kp LG(DOWN), &kp LC(LA(DOWN)), &kp LG(DOWN))
+        OS_KEY(win_full, &kp LG(UP), &kp LC(LA(RET)), &kp LG(PG_UP))
+        OS_KEY(mon_left, &kp LG(LS(LEFT)), &kp LG(LA(LC(LEFT))), &kp LG(LS(LEFT)))
+        OS_KEY(mon_right, &kp LG(LS(RIGHT)), &kp LG(LA(LC(RIGHT))), &kp LG(LS(RIGHT)))
+        OS_KEY(mon_right, &kp LG(LS(RIGHT)), &kp LG(LA(LC(RIGHT))), &kp LG(LS(RIGHT)))
+        OS_KEY(show_desk, &kp LG(D), &kp F11, &kp LG(D))
+        OS_KEY(scrn_shot, &kp PSCRN, &kp LG(LS(N4)), &kp PSCRN)
+        OS_KEY(scrn_rec, &kp LG(LS(R)), &kp LG(LS(N5)), &kp LG(LS(R)))
     };
 
     conditional_layers {
