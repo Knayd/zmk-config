@@ -13,6 +13,10 @@
 #include <behaviors/oskey.dtsi>
 #include <dt-bindings/zmk/mouse.h>
 
+// todos: 
+// - eager mods
+// - maybe add swap nav layer
+
 // Layers
 #define _BASE 0
 #define _MAC_BASE 1
@@ -180,7 +184,7 @@
             display-name = "NAVIGATON";
             bindings = <
                 _______         &kp LC(W)   _______     &prev_tab   &next_tab   _______ _______         _______ _______ &kp HOME        &kp UP      &kp END     _______ &scrn_rec
-                &delete_word    _______     _______     _______     _______     _______ _______         _______ _______ &kp LEFT        &kp DOWN    &kp RIGHT   _______ _______
+                &delete_word    &kp LGUI    &kp LALT    &kp LSHIFT  &kp LCTRL   _______ _______         _______ _______ &kp LEFT        &kp DOWN    &kp RIGHT   _______ _______
                 &ok_redo        &ok_undo    &ok_cut     &ok_copy    &ok_paste                                   _______ &kp LA(LC(L))   _______     _______     _______ _______
                                             _______     _______     _______                                     _______ _______         _______
             >;
