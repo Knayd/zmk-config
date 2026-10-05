@@ -81,7 +81,7 @@
 / {
     macros {
         ZMK_MACRO_DEF(bt_win, &bt BT_SEL 0 &os_sel OS_WIN &to _BASE)
-        ZMK_MACRO_DEF(bt_mac, &bt BT_SEL 1 &os_sel OS_MAC &to _MAC_BASE)
+        ZMK_MACRO_DEF(bt_mac, &bt BT_SEL 1 &os_sel OS_MAC &to _SWAP_FLAG)
         ZMK_MACRO_DEF(bt_lin, &bt BT_SEL 2 &os_sel OS_LIN &to _BASE)
     };
 };
